@@ -4,20 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Maze Game</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Add your CSS here */
+        #maze {
+            display: grid;
+            gap: 1px;
+            justify-content: center;
+            align-content: center;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            background-color: #e0e0e0;
+        }
+        .path {
+            background-color: #4caf50;
+        }
+        .wall {
+            background-color: black;
+        }
+        .start {
+            background-color: blue;
+        }
+        .end {
+            background-color: red;
+        }
+        .collectible {
+            background-color: yellow;
+        }
+        #message-container {
+            text-align: center;
+            margin: 20px;
+        }
+        #start-button, #play-again-button {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
 </head>
 <body>
-    <div id="maze-container">
-        <div id="message-container">
-            <div id="message"></div>
-        </div>
+    <div id="game-container">
         <div id="maze"></div>
-        <button id="start-button">Start Game</button>
-        <button id="play-again-button">Play Again</button>
-        <div id="score-display">Score: 0</div>
-        <div id="level-display">Level: 1</div>
-        <div id="high-score-display">High Score: 0</div>
+        <div id="message-container">
+            <p id="message"></p>
+            <button id="start-button">Start Game</button>
+            <button id="play-again-button" style="display: none;">Play Again</button>
+        </div>
+        <div id="info">
+            <p id="level-display">Level: 1</p>
+            <p id="score-display">Score: 0</p>
+            <p id="high-score-display">High Score: 0</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
