@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive; /* Retro arcade font */
+}
+
+#maze-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#maze {
+    display: grid;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cell.path {
+    background-color: #4caf50; /* Green for path */
+}
+
+.cell.wall {
+    background-color: #000; /* Black for walls */
+}
+
+.cell.collectible {
+    background-color: #ffd700; /* Gold for collectibles */
+}
+
+.cell.flip {
+    transform: rotateY(180deg); /* Flip animation */
+}
+
+.hidden {
+    background-color: #444;
+}
+
+#message-container {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#start-button,
+#play-again-button {
+    display: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#score-display, #level-display, #high-score-display {
+    font-size: 16px;
+    margin: 5px;
+}
